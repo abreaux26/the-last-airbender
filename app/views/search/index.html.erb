@@ -1,0 +1,10 @@
+<h3>Total Number: <%= @fire_nation_characters.size %></h3>
+<% @limit_characters.each do |character| %>
+  <section class="members">
+      <h1>Name: <%= character[:name] %></h1>
+      <%= image_tag "#{character[:photoUrl]}" %><br>
+      <h3 class="allies">Allies: <%= character[:allies] %></h3>
+      <h3 class="enemies">Enemies: <%= character[:enemies] %></h3>
+      <h3 class="affiliations">Affiliations: <%= character[:affiliation] %></h3>
+  </section>
+<% end %>

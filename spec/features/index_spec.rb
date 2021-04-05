@@ -15,7 +15,7 @@ RSpec.describe 'As a user' do
       select "Fire Nation", from: :nation
       click_button 'Search For Members'
 
-      expect(page).to have_content("Total Number: ")
+      expect(page).to have_content("Total Number: 97")
     end
 
     it 'I should see a list with the detailed information for the first 25 members of the Fire Nation.' do
@@ -34,7 +34,7 @@ RSpec.describe 'As a user' do
       click_button 'Search For Members'
 
       within(first(".members")) do
-        expect(page).to have_content("Name: ")
+        expect(page).to have_content("Name: Chan (Fire Nation admiral)")
       end
     end
 
@@ -45,7 +45,7 @@ RSpec.describe 'As a user' do
       click_button 'Search For Members'
 
       within(first(".members")) do
-        expect(page).to have_content("Allies: ")
+        expect(page).to have_content("Ozai")
         expect(page).to have_css(".allies")
       end
     end
@@ -57,7 +57,7 @@ RSpec.describe 'As a user' do
       click_button 'Search For Members'
 
       within(first(".members")) do
-        expect(page).to have_content("Enemies: ")
+        expect(page).to have_content("Earth Kingdom")
         expect(page).to have_css(".enemies")
       end
     end
@@ -69,7 +69,7 @@ RSpec.describe 'As a user' do
       click_button 'Search For Members'
 
       within(first(".members")) do
-        expect(page).to have_content("Affiliations: ")
+        expect(page).to have_content("Fire Nation Navy")
         expect(page).to have_css(".affiliations")
       end
     end
