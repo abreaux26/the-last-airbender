@@ -1,8 +1,8 @@
 class AffiliationService
   def self.search(affiliation, limit)
-    @members = get_affiliate_members(affiliation)
+    members = get_affiliate_members(affiliation)
 
-    found_members = @members.find_all { |m| m[:affiliation].include? affiliation }
+    found_members = members.find_all { |m| m[:affiliation].include? affiliation }
     found_members.first(limit)
   end
 
