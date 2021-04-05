@@ -5,8 +5,9 @@ RSpec.describe SearchFacade do
     it 'called Facade search and gets data' do
       affiliation = 'Fire Nation'
 
-      result = SearchFacade.search(affiliation)
+      result = SearchFacade.search(affiliation, 25)
       expect(result).to be_an(Array)
+      expect(result.size).to eq(25)
     end
   end
 end
